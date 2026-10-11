@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About me",
+    "minecraft": "Minecraft"
+  },
+  "mc": {
+    "title": "Forge 1.20.1 Server",
+    "status": {
+      "checking": "Checking Server...",
+      "online": "Server Online",
+      "offline": "Server Offline"
+    },
+    "cards": {
+      "mods": {
+        "title": "Mods",
+        "desc": "Download modpack (.zip)"
+      },
+      "discord": {
+        "title": "Discord",
+        "desc": "Community and server announcements"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 João Augustto. All rights reserved."
+  }
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>João Augustto</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#home" class="logo">João Augustto</a>
+
+      <nav class="navbar" aria-label="Navegação Principal">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.about">About me</a>
+        <a href="minecraft/index.html" data-i18n="nav.minecraft">Minecraft</a>
+      </nav>
+
+      <div class="lang-switch" role="group" aria-label="Seletor de Idioma">
+        <button id="btn-pt" class="lang-btn active">PT</button>
+        <span aria-hidden="true">|</span>
+        <button id="btn-en" class="lang-btn">EN</button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="welcome-section">
+        <h1 data-i18n="hero.title">Olá, sou o João Augustto</h1>
+        <p data-i18n="hero.subtitle">
+          Desenvolvedor de sistemas (Python | Java | Javascript)
+        </p>
+      </section>
+
+      <section id="projects" class="projects-container">
+        <h2 data-i18n="projects.title">Meus Projetos</h2>
+
+        <ul class="cards-grid">
+          <li>
+            <article class="card">
+              <h3 data-i18n="cards.about.title">About me</h3>
+              <p data-i18n="cards.about.description">
+                Saiba mais sobre minha trajetória profissional e minhas
+                tecnologias.
+              </p>
+              <a href="#about" class="btn" data-i18n="cards.about.button"
+                >Acessar</a
+              >
+            </article>
+          </li>
+
+          <li>
+            <article class="card">
+              <h3 data-i18n="cards.minecraft.title">Minecraft</h3>
+              <p data-i18n="cards.minecraft.description">
+                Servidor de Minecraft Forge 1.20.1 focado em sobrevivência, mods
+                e exploração[cite: 1].
+              </p>
+              <a
+                href="minecraft/index.html"
+                class="btn"
+                data-i18n="cards.minecraft.button"
+                >Acessar</a
+              >
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p data-i18n="footer.copyright">
+        &copy; 2026 João Augustto. Todos os direitos reservados.
+      </p>
+    </footer>
+  </body>
+</html>

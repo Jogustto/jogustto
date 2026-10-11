@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre mim",
+    "minecraft": "Minecraft"
+  },
+  "hero": {
+    "title": "Olá, sou o João Augustto",
+    "subtitle": "Desenvolvedor de sistemas (Python | Java | Javascript)"
+  },
+  "projects": {
+    "title": "Meus Projetos"
+  },
+  "cards": {
+    "about": {
+      "title": "About me",
+      "description": "Saiba mais sobre minha trajetória profissional e minhas tecnologias.",
+      "button": "Acessar"
+    },
+    "minecraft": {
+      "title": "Minecraft",
+      "description": "Servidor de Minecraft Forge 1.20.1 focado em sobrevivência, mods e exploração[cite: 1].",
+      "button": "Acessar"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 João Augustto. Todos os direitos reservados."
+  }
+}

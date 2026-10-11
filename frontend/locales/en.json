@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About me",
+    "minecraft": "Minecraft"
+  },
+  "hero": {
+    "title": "Hi, I'm João Augustto",
+    "subtitle": "Software Engineer (Python | Java | Javascript)"
+  },
+  "projects": {
+    "title": "My Projects"
+  },
+  "cards": {
+    "about": {
+      "title": "About me",
+      "description": "Learn more about my career path and technical skills.",
+      "button": "View"
+    },
+    "minecraft": {
+      "title": "Minecraft",
+      "description": "Minecraft Forge 1.20.1 server focused on survival, mods, and exploration[cite: 1].",
+      "button": "View"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 João Augustto. All rights reserved."
+  }
+}

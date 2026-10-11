@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre mim",
+    "minecraft": "Minecraft"
+  },
+  "mc": {
+    "title": "Servidor Forge 1.20.1",
+    "status": {
+      "checking": "Verificando Servidor...",
+      "online": "Servidor Online",
+      "offline": "Servidor Offline"
+    },
+    "cards": {
+      "mods": {
+        "title": "Mods",
+        "desc": "Baixar pacote de mods (.zip)"
+      },
+      "discord": {
+        "title": "Discord",
+        "desc": "Comunidade e avisos do servidor"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 João Augustto. Todos os direitos reservados."
+  }
+}

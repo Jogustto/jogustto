@@ -1,0 +1,182 @@
+/* Importa as variáveis e estilos globais */
+@import url('../../../css/style.css');
+
+/* ==========================================================================
+   1. ÁREA PRINCIPAL E STATUS DO SERVIDOR MINECRAFT
+   ========================================================================== */
+.mc-main {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.status-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.status-container h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+.status-badge-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--status-checking);
+  display: inline-block;
+  box-shadow: 0 0 8px var(--status-checking);
+}
+
+.status-badge.status-online .status-dot {
+  background-color: var(--status-online);
+  box-shadow: 0 0 8px var(--status-online);
+}
+
+.status-badge.status-offline .status-dot {
+  background-color: var(--status-offline);
+  box-shadow: 0 0 8px var(--status-offline);
+}
+
+/* ==========================================================================
+   2. SELEÇÃO DE PERSONAGENS (DIVISÕES VERTICAIS)
+   ========================================================================== */
+.character-select-container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+}
+
+.character-select-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  min-height: 480px;
+}
+
+.char-card {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-right: 2px solid var(--border-color);
+  transition: flex 0.4s ease, filter 0.4s ease;
+  filter: grayscale(100%);
+}
+
+.char-card:last-child {
+  border-right: none;
+}
+
+.char-card-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Imagens de Fundo com overlay para legibilidade dos textos */
+.char-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+/* Imagens locais configuradas conforme sua estrutura de pastas */
+.card-mods .char-bg-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../assets/images/mods_image.jpg');
+}
+
+.card-discord .char-bg-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../assets/images/discord_image.jpg');
+}
+
+.char-card-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-main);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.char-card-content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.char-card-content p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--card-bg);
+}
+
+/* --- INTERAÇÃO HOVER (FOCO E COR) --- */
+.character-select-grid:hover .char-card {
+  flex: 0.8;
+  filter: grayscale(100%) brightness(0.5);
+}
+
+.character-select-grid .char-card:hover {
+  flex: 1.5;
+  filter: grayscale(0%) brightness(1);
+}
+
+.character-select-grid .char-card:hover .char-bg-image {
+  transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+  .character-select-grid {
+    flex-direction: column;
+  }
+
+  .char-card {
+    border-right: none;
+    border-bottom: 2px solid var(--border-color);
+    min-height: 220px;
+  }
+
+  .character-select-grid:hover .char-card {
+    flex: 1;
+  }
+
+  .character-select-grid .char-card:hover {
+    flex: 1.2;
+  }
+}

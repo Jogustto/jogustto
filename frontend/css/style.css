@@ -1,0 +1,241 @@
+/* ==========================================================================
+   1. RESET BÁSICO E VARIÁVEIS DE TEMA GLOBAIS
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --bg-color: #111111;
+  --card-bg: #ffcee9;
+  --border-color: #ff53b2;
+  --text-main: #ffffff;
+  --text-muted: #000000;
+  --accent-color: #ff53b2;
+  --btn-primary: #6bff9c;
+  --btn-primary-hover: #009632;
+  
+  /* Status para o ecossistema */
+  --status-online: #22c55e;
+  --status-checking: #eab308;
+  --status-offline: #ef4444;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background-color: var(--card-bg);
+  border-bottom: 2px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.logo:hover {
+  opacity: 0.85;
+}
+
+.navbar {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--accent-color);
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.lang-btn:hover {
+  color: var(--accent-color);
+}
+
+.lang-btn.active {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* ==========================================================================
+   3. CONTEÚDO PRINCIPAL (LANDING PAGE)
+   ========================================================================== */
+main {
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  width: 100%;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+.welcome-section p {
+  color: var(--text-main);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   4. SEÇÃO DE PROJETOS E CARDS DA HOME
+   ========================================================================== */
+.projects-container h2 {
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.cards-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.cards-grid li {
+  display: flex;
+}
+
+.card {
+  width: 100%;
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--text-main);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   5. BOTÕES PADRÃO
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  text-align: center;
+  background-color: var(--btn-primary);
+  color: var(--text-muted);
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--btn-primary-hover);
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   6. RODAPÉ E RESPONSIVIDADE
+   ========================================================================== */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--bg-color);
+  border-top: 2px solid var(--border-color);
+  color: var(--text-main);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .navbar {
+    gap: 1rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 1.85rem;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+}
