@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "mc.jogustto.com.br"
+        }
+      ],
+      "destination": "/minecraft/:path*"
+    }
+  ]
+}
