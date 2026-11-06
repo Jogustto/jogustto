@@ -1,0 +1,32 @@
+:root {
+    --bg-primary: #1f1f1f;
+    --bg-secondary: #1b1b1b;
+    --bg-warning: #f8fa9e;
+
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    --text-warning: #000000;
+
+    --btn-bg: #ee3312;
+    --btn-text: #ffffff;
+    --btn-hover: #ec2300;
+
+    --accent-color: #ec2300;
+
+    --font-main: Arial, Helvetica, sans-serif;
+
+    --transition-fast: opacity 0.2s ease, color 0.2s ease;
+    --transition-transform: transform 0.2s ease, opacity 0.2s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    font-family: var(--font-main);
+    color: var(--text-primary);
+}

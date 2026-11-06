@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <title><%= title %></title>
+
+        <link rel="icon" href="data:,">
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <%- include('partials/header') %>
+        <main>
+            <section class="donation-section">
+                <h1 class="donation-title">Apoie</h1>
+                <p class="donation-note">
+                    Nota: Este site não intermediará nenhuma doação financeira e
+                    não possui vínculo comercial com nenhuma das entidades
+                    listadas. Todos os links direcionam para as plataformas
+                    oficiais de cada instituição.
+                </p>
+                <menu class="donation-links">
+                    <li>><a href="https://coiab.org.br/doe-agora/" target="_blank" rel="noopener noreferrer">Doar para a COIAB</a></li
+                    <li>><a href="https://apoie.socioambiental.org/apoie/single_step" target="_blank" rel="noopener noreferrer">Doar para o ISA</a></li
+                    <li>><a href="https://anaind.org.br/apoie/" target="_blank" rel="noopener noreferrer">Doar para a ANAÍ </a></li
+                    <li>><a href="https://ongzoe.org/" target="_blank" rel="noopener noreferrer">Doar para a Zoé</a></li
+                </menu>
+            </section>
+            <section class="news-section">
+                <h1 class="news-title">Notícias</h1>
+                <% if (news.length === 0) { %>
+                    <p class="news-empty">Nenhuma notícia encontrada no momento.</p>
+                <% } else { %>
+                    <ul class="news-grid">
+                        <%  for (const article of news) { %>
+                        <li>
+                            <article class="news-card">
+                                <% if (article.urlToImage) { %>
+                                    <img class="news-card-image" src="<%= article.urlToImage %>" alt="<%= article.title %>">
+                                <% } %>
+                                <h2 class="news-card-title"><%= article.title %></h2>
+                                <p class="news-card-description"><%= article.description %></p>
+
+                                <footer class="news-card-footer">
+                                    <small class="news-card-source">Fonte: <%= article.source.name %></small>
+                                    <a class="news-card-link" href="<%= article.url %>" target="_blank" rel="noopener noreferrer">Ler matéria completa</a>
+                                </footer>
+                            </article>
+                        </li>
+                        <% } %>
+                    </ul>
+                <% } %>
+                <!-- Notícias mais recentes sobre a situação dos povos indígenas do Brasil -->
+                <!-- API para buscar notícias -->
+            </section>
+            <section>
+                <h1>Influenciadores para seguir</h1>
+                <a href="https://www.instagram.com/cunhaporanga_oficial/">Maira Gomez</a>
+                <p>É uma das maiores criadoras de conteúdo indígena do país. Ela compartilha a rotina da sua aldeia no Amazonas, alimentação, arte e saberes tradicionais para milhões de pessoas.</p>
+                <a href="https://www.instagram.com/owera.oficial/">O͛werá</a>
+                <p>Rapper, poeta e ativista do povo Guarani Mbyá. Ele usa a música (hip-hop em português e na língua guarani) como ferramenta de conscientização, denúncia e demarcação cultural.</p>
+                <a href="https://www.instagram.com/jozi.kaingang/">Joziléia Daniza Jagso Schild</a>
+                <p>Professora, doutora em Antropologia Social e uma das principais lideranças intelectuais do povo Kaingang. Usa suas redes para debates acadêmicos, ativismo político e defesa da mulher indígena.</p>
+                <a href="https://www.instagram.com/cristianwariu/">WARIU</a>
+                <p>Youtuber, comunicador e criador de conteúdo audiovisual. Ele desmistifica estereótipos sobre os povos originários com uma linguagem leve, didática e jovem, abordando tecnologia, cultura e atualidades.</p>
+                <a href="https://www.instagram.com/soniaguajajara/">Sônia Guajajara</a>
+                <p>Uma das maiores lideranças indígenas e ambientais do mundo. Foi a primeira Ministra dos Povos Indígenas do Brasil e usa suas redes para a articulação política de direitos e preservação da floresta.</p>
+            </section>
+        </main>
+        <%- include('partials/footer') %>
+    </body>
+</html>

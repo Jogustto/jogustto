@@ -1,0 +1,110 @@
+.donation-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center;
+}
+
+.donation-title {
+    grid-column: 1/-1;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+}
+
+.donation-note {
+    background-color: var(--bg-warning);
+    color: var(--text-warning);
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.donation-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.donation-links a {
+    display: block;
+    text-align: center;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    padding: 0.8rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition-transform);
+}
+
+.donation-links a:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-2px);
+}
+
+.news-section {
+    padding: 2rem;
+}
+
+.news-title {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.news-grid > li {
+    display: flex;
+}
+
+.news-card {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+.news-card-image {
+    height: 25vh;
+    object-fit: cover;
+}
+
+.news-card-description {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.news-card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.news-card-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: var(--transition-fast);
+}
+
+.news-card-link:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
